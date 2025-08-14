@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -19,9 +20,11 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="text-foreground hover:text-art-gold">Sign In</Button>
-          <Button className="bg-gradient-to-r from-art-gold to-art-gold-light hover:from-art-gold-light hover:to-art-gold text-art-navy font-semibold shadow-lg">
-            Join as Artist
+          <Button variant="ghost" className="text-foreground hover:text-art-gold" asChild>
+            <Link to="/login">Sign In</Link>
+          </Button>
+          <Button className="bg-gradient-to-r from-art-gold to-art-gold-light hover:from-art-gold-light hover:to-art-gold text-art-navy font-semibold shadow-lg" asChild>
+            <Link to="/join-artist">Join as Artist</Link>
           </Button>
         </div>
       </div>
